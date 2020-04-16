@@ -1,0 +1,297 @@
+/* Css Custommer   */
+
+body {
+    padding: 0;
+    margin: 0;
+    color: black;
+    font-family: Montserrat-Bold;
+    z-index: 999;
+}
+
+::-webkit-scrollbar {
+    background: black;
+    width: 4px;
+    height: 20px;
+    overflow: hidden;
+}
+
+ ::-webkit-scrollbar-thumb {
+    background: white !important;
+    border-radius: 30px;
+}
+
+.navbar {
+    margin-bottom: 0;
+    background-color: rgb(255, 255, 255) !important;
+    border: 0;
+    font-size: 13px;
+    letter-spacing: 2px;
+    font-weight: 400;
+    text-align: center;
+    z-index: 99;
+    box-shadow: 10px 0px 40px rgb(201, 200, 200);
+}
+
+
+/* MENU LIST  */
+
+.navbar li a,
+.navbar .navbar-brand {
+    color: #000000 !important;
+    padding-left: 20px;
+    padding-top: 1vh;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+/* Text logo  */
+
+.navbar-brand {
+    font-weight: 900 !important;
+}
+
+.navbar-nav li a:hover {
+    color: rgb(23, 81, 241) !important;
+}
+
+
+/* Menu so 1  */
+
+.navbar-nav li.active a {
+    /* color: rgb(23, 45, 250) !important; */
+    background: none !important;
+    /* border-bottom: 2px solid black; */
+    background-color: rgb(20, 97, 197)!important;
+    color: rgb(255, 255, 255)!important;
+}
+
+.navbar-default .navbar-toggle {
+    border-color: transparent;
+}
+
+.header {
+    color: rgb(255, 255, 255);
+    font-size: 13px;
+    background: #006bcf;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+ul li {
+    display: inline-block;
+    position: relative;
+    line-height: 21px;
+    text-align: left;
+}
+
+ul li a {
+    display: block;
+    padding: 8px 25px;
+    color: #333;
+    text-decoration: none;
+    font-weight: 900;
+    font-size: 10px;
+}
+
+ul li a:hover {
+    text-decoration: none;
+}
+
+
+/* nut exit  */
+
+ul li ul .dropdown {
+    min-width: 100%;
+    background: #f2f2f2;
+    display: none;
+    position: absolute;
+    z-index: 999;
+    left: 0;
+}
+
+ul li ul.dropdown li {
+    display: block;
+}
+
+
+/* icon menu  */
+
+.fa-bars {
+    font-size: 15px;
+}
+
+.al {
+    padding-top: 50px !important;
+    min-height: 100vh;
+}
+
+
+/* thanh chuc nang chinh  */
+
+.nv {
+    background: rgb(20, 97, 197);
+    border: 1px solid rgb(255, 255, 255);
+    width: 100px;
+    text-align: center;
+    height: 30px;
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-weight: 600;
+}
+
+.nv:hover,
+.nv:active {
+    background: white;
+    border: 1px solid black;
+    color: black;
+}
+
+
+/* table list  */
+
+#myTable {
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid #ddd;
+    font-size: 12px;
+    padding: 0px !important;
+}
+
+#myTable th,
+#myTable td {
+    text-align: left;
+    padding: 10px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
+
+#myTable tr {
+    border-bottom: 1px solid #ddd;
+}
+
+thead tr th {
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+    font-weight: 600;
+    background: #006bcf;
+    text-align: center !important;
+}
+
+tbody tr td {
+    text-align: left;
+    color: black;
+    font-weight: 600;
+}
+
+
+/* input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 30px;
+    height: 40px;
+} */
+
+
+/* footer  */
+
+.end {
+    color: rgb(0, 0, 0);
+    padding-bottom: 20px;
+    padding-top: 20px;
+    font-weight: 600;
+    height: 120px;
+}
+
+.col-lg-12 a {
+    color: royalblue;
+}
+
+.col-lg-12 a:hover {
+    text-decoration: none;
+    color: green;
+}
+
+#clock {
+    text-align: center;
+    float: right;
+    border-radius: 20px;
+    font-weight: 600;
+    color: rgb(0, 0, 0);
+    font-size: 13px;
+    width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
+
+#myTable table {
+    padding: 0px 0px 0px 0px !important;
+    border-bottom: 1px solid black;
+    font-weight: bold;
+    cursor: pointer;
+    *cursor: hand;
+}
+
+#myInput {
+    width: 300px !important;
+    text-align: center;
+}
+
+
+/* The Modal (background) */
+
+.modal {
+    display: none;
+    /* mặc định được ẩn đi */
+    position: fixed;
+    /* vị trí cố định */
+    z-index: 1;
+    /* Ưu tiên hiển thị trên cùng */
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+
+/* Modal Content */
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 60%;
+}
+
+
+/* The Close Button */
+
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nhân Viên | Quản Lý Bán Hàng</title>
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="DucNguyen">
+    <meta property="og:url" />
+    <meta property="og:type" content="ducnguyen" />
+    <meta property="og:title" content="Website DucNguyen" />
+    <meta property="og:description" content="Wellcome to my Website" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/cus.css">
+
+    <!-- Bootstrap + JS  -->
+    <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/png" href="images/icons/favicon.ico" />
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-sweetalert/1.0.1/sweetalert.min.css">
+
+    <body onload="time()">
+        <div class="container-fluid">
+            <!-- nav - hearder   -->
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                    <!-- St Menu right -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                        <a class="navbar-brand" href="#"><i class="fa fa-user-circle" aria-hidden="true"></i> QUẢN LÝ NHÂN
+                        VIÊN</a>
+                    </div>
+                    <!-- End Menu right -->
+
+
+                    <!-- MENU RIGHT Left  -->
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="active"><a href="#home" data-toggle="tooltip" data-placement="bottom" title="NHÂN VIÊN">NHÂN VIÊN</a></li>
+                            <li><a href="" data-toggle="tooltip" data-placement="bottom" title="ĐIỂM DANH">ĐIỂM DANH</a>
+                            </li>
+                            <li><a href="" data-toggle="tooltip" data-placement="bottom" title="TIỀN LƯƠNG">TIỀN LƯƠNG</a>
+                            </li>
+                            <li><a href="" data-toggle="tooltip" data-placement="bottom" title="LỊCH CÔNG TÁC">LỊCH CÔNG
+                                TÁC</a>
+                            </li>
+                            <li><a href="#contact" data-toggle="tooltip" data-placement="bottom" title="BÁO CÁO">BÁO CÁO</a>
+                            </li>
+                            <li><a href="#tour" data-toggle="tooltip" data-placement="bottom" title="SỰ KIỆN">SỰ KIỆN</a>
+                            </li>
+                            <li>
+                                <a href="#" data-toggle="tooltip" data-placement="bottom" title="TÀI KHOẢN"><b>Tài Khoản</b>
+                                <span class="caret"></span>
+                            </a>
+                                <ul class="dropdown">
+                                    <li><a href="index.html" data-toggle="tooltip" data-placement="bottom" title="ĐĂNG XUẤT"><b>Đăng xuất <i class="fas fa-sign-out-alt"></i></b></a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <!--END  MENU Left   -->
+                    </div>
+            </nav>
+            <!--end nav - hearder   -->
+
+            <div class="container-fluid al">
+                <div id="clock"></div>
+                <!-- Search -->
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" id="myInput" onkeyup="myFunction()" type="search" placeholder="Nhập tên nhân viên cần tìm" data-toggle="tooltip" data-placement="bottom" aria-label="Search">
+
+                </form>
+                <!-- End Search  -->
+                <div class="cnc">
+                    <b>CHỨC NĂNG CHÍNH:</b><br>
+                    <!-- <button class="nv add-new" id="myModal" onclick="addUser()" data-target="#myModal" data-toggle="tooltip" data-placement="top" title="Thêm Nhân Viên"><i class="fas fa-user-plus"></i> </button> -->
+                    <button id="myBtn" onclick="addUser()" class="nv add-new" title="Thêm Nhân Viên"><i
+                        class="fas fa-user-plus"></i></button>
+                    <!-- The Modal -->
+                    <div id="myModal" class="modal" role="dialog">
+                        <div class="modal-dialog">
+
+                            <!-- Nội dung form đăng nhập -->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h4 class="modal-title text-center">Thông Tin Nhân Viên</h4>
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="form-group">
+                                        <label for="stt">Số Thứ Tự:</label>
+                                        <input type="text" class="form-control" id="stt">
+                                        <label for="name">Tên Nhân Viên:</label>
+                                        <input type="text" class="form-control" id="name">
+                                        <label for="gender">Giới Tính:</label>
+                                        <input type="text" class="form-control" id="gender">
+                                        <label for="birday">Ngày Sinh:</label>
+                                        <input type="date" class="form-control" id="birday">
+                                        <label for="bophan">Bộ phân:</label>
+                                        <input type="text" class="form-control" id="bophan">
+                                        <label for="phone">Số Điện Thoại</label>
+                                        <input type="number" class="form-control" id="phone">
+                                        <label for="address">Địa Chỉ:</label>
+                                        <input type="text" class="form-control" id="address">
+                                        <label for="position">Chức Vụ:</label>
+                                        <input type="text" class="form-control" id="position">
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-primary" id="save_user" onclick="saveUser()">Lưu Lại</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="nv" type="button" onclick="sortTable()" data-toggle="tooltip" data-placement="top" title="Lọc Dữ Liệu"><i class="fa fa-filter" aria-hidden="true"></i></button>
+                    <button class="nv xuat" data-toggle="tooltip" data-placement="top" title="Xuất File"><i
+                        class="fas fa-file-import"></i></button>
+                    <button class="nv cog" id="st" onclick="setting_btn()" data-toggle="tooltip" data-placement="bottom" title="Cài đặt"><i class="fas fa-user-cog"></i></button>
+                    <div class="table-title">
+                        <div class="row">
+
+                        </div>
+
+                    </div>
+                </div>
+                <br>
+                <!-- Table List -->
+                <table class="table table-bordered" id="myTable">
+
+                    <tbody>
+                    </tbody>
+                </table>
+                <!--End Table List -->
+
+                <div id="pageNavPosition" class="text-right"></div>
+
+            </div>
+            <!-- End container  -->
+            <hr class="hr1">
+            <div class="container-fluid end">
+                <div class="row text-center">
+                    <div class="col-lg-12 link">
+                        <i class="fab fa-facebook-f"></i>
+                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-youtube"></i>
+                        <i class="fab fa-google"></i>
+                    </div>
+                    <div class="col-lg-12">
+                        2020 CopyRight Phần Mềm Quản Lý | Design by <a href="#">DUC NGUYEN</a>
+                    </div>
+                </div>
+
+            </div>
+            </div>
+
+
+
+
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-sweetalert/1.0.1/sweetalert.js"></script>
+            <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+            <script src="js/index.js">
+            </script>
+            <script src="js/main.js">
+            </script>
+
+
+        </div>
+
+    </body>
+
+</html>
